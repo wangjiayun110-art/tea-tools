@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2XYRVKWTV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E2XYRVKWTV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>新加坡个人所得税计算器（YA2026）：算算你一年要交多少税 | 慢茶中文版</title>
+<meta name="description" content="免费新加坡个税计算器，按 IRAS YA2026 税率：输入月薪和花红，算出应纳税所得额、应缴税款、实际税率和每月税款。附常见月薪速查表和完整税率表。">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "新加坡个人所得税计算器", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0"}, "description": "免费新加坡个税计算器，按 IRAS YA2026 税率：输入月薪和花红，算出应纳税所得额、应缴税款、实际税率和每月税款。", "url": "https://cn.calmsteep.com/xinjiapo-geshui-jisuanqi.html", "inLanguage": "zh-CN"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"YA2026 是哪一年的收入？","acceptedAnswer":{"@type":"Answer","text":"YA2026 税的是 2025 年赚的收入。新加坡的课税年度（Year of Assessment）看的是前一年：YA2026 对应 2025 年 1 月 1 日到 12 月 31 日的收入，2026 年报税。"}},{"@type":"Question","name":"非居民在新加坡怎么交税？","acceptedAnswer":{"@type":"Answer","text":"非居民的受雇收入按 15% 的固定税率，或者按居民累进税率，两者取高的那一个，没有个人减免。在新加坡工作 60 天或以下的短期外国雇员不用交税，董事、艺人和专业人士除外。"}},{"@type":"Question","name":"减免最多能扣多少？","acceptedAnswer":{"@type":"Answer","text":"全部个人减免加起来每年上限 80,000 新元。只有税务居民能申请减免。常见的减免有劳动所得减免、公积金减免、配偶减免、子女减免、父母减免、SRS 减免和公积金现金填补减免。YA2026 没有个人所得税回扣。"}}]}</script>
+<link rel="canonical" href="https://cn.calmsteep.com/xinjiapo-geshui-jisuanqi.html">
+<meta property="og:title" content="新加坡个人所得税计算器（YA2026）：算算你一年要交多少税 | 慢茶中文版">
+<meta property="og:description" content="免费新加坡个税计算器，按 IRAS YA2026 税率：输入月薪和花红，算出应纳税所得额、应缴税款、实际税率和每月税款。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cn.calmsteep.com/xinjiapo-geshui-jisuanqi.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新加坡个人所得税计算器（YA2026）：算算你一年要交多少税 | 慢茶中文版">
+<meta name="twitter:description" content="免费新加坡个税计算器，按 IRAS YA2026 税率：输入月薪和花红，算出应纳税所得额、应缴税款、实际税率和每月税款。">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://cn.calmsteep.com/"},{"@type":"ListItem","position":2,"name":"新加坡个人所得税计算器","item":"https://cn.calmsteep.com/xinjiapo-geshui-jisuanqi.html"}]}</script>
+<style>
+.calc-box{border:1px solid #E8E0D2;background:#fff;border-radius:4px;padding:22px 20px;margin:18px 0}
+.calc-row{margin:14px 0}
+.calc-row label{display:block;font-size:17px;margin-bottom:6px}
+.calc-row input{font-family:inherit;font-size:17px;padding:10px 12px;border:1px solid #D8CFBC;border-radius:4px;width:100%;max-width:340px;box-sizing:border-box}
+.calc-hint{font-size:15px;color:#8A7D6B;margin-top:4px}
+.calc-btn{font-family:inherit;font-size:17px;background:#8A3B2E;border:1px solid #8A3B2E;color:#FDFCF9;border-radius:4px;padding:11px 26px;cursor:pointer;margin-top:6px}
+.result{display:none;border:1px solid #E8E0D2;background:#FDFCF9;border-radius:4px;padding:20px;margin:18px 0}
+.result .big{font-size:34px;color:#8A3B2E;line-height:1.2}
+.result .sub{font-size:16px;color:#5A4E40;margin-top:4px}
+.result table{margin-top:14px}
+.tax-table{width:100%;border-collapse:collapse;font-size:16px;margin:14px 0}
+.tax-table th,.tax-table td{border:1px solid #E8E0D2;padding:8px 10px;text-align:left}
+.tax-table th{background:#F0EADD}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-in"><a class="brand" href="index.html">慢茶<span>TEA &amp; STILLNESS</span></a><nav class="nav"><a href="index.html">首页</a><a href="start-here.html">新手入门</a><a href="tea-brewing-timer.html">泡茶计时器</a><a href="faq.html">常见问题</a><a href="about.html">关于本站</a><a href="https://calmsteep.com/">English version</a></nav></div></header>
+<div class="wrap pagehead"><p class="kicker">新马生活工具</p><h1>新加坡个人所得税计算器</h1><p class="lede">按新加坡税务局 IRAS 的 YA2026 税率，输入月薪和花红，算出你一年要交多少税。税前先扣减免，再按档位累进，不是一刀切。</p></div>
+<main>
+<p>在新加坡工作，税是按“应纳税所得额”算的：先把年收入减掉各种减免，剩下的部分按 0% 到 24% 的累进税率一档一档算。头 2 万新元不用交税，收入越高，超出部分的税率越高。YA2026 税的是 2025 年赚的收入，2026 年报税。</p>
+
+<div class="calc-box">
+<div class="calc-row"><label for="inSalary">每月工资（新元 S$）</label><input id="inSalary" type="number" min="0" step="1" inputmode="decimal" placeholder="例如 6000"><p class="calc-hint">税前月薪，不含花红。</p></div>
+<div class="calc-row"><label for="inBonus">年终花红（新元 S$，可选）</label><input id="inBonus" type="number" min="0" step="1" inputmode="decimal" placeholder="没有填 0"><p class="calc-hint">一年拿到的花红总数，没有就填 0。</p></div>
+<div class="calc-row"><label for="inRelief">减免总额（新元 S$）</label><input id="inRelief" type="number" min="0" step="1" inputmode="decimal" value="1000"><p class="calc-hint">默认已含劳动所得减免 $1,000（55 岁以下）。公积金、配偶、子女、父母、SRS 等减免加总填在这里；全部减免每年上限 $80,000。</p></div>
+<button class="calc-btn" id="calcBtn" type="button">算一下要交多少税</button>
+</div>
+
+<div class="result" id="resultBox">
+<div class="big" id="rTax">—</div>
+<div class="sub" id="rTaxNote">一年应缴税款</div>
+<p id="rLines" style="margin-top:14px"></p>
+<table class="tax-table" id="rBands" style="display:none"><thead><tr><th>档位</th><th>税率</th><th>这档的税</th></tr></thead><tbody></tbody></table>
+</div>
+
+<h2>常见月薪要交多少税（YA2026）</h2>
+<p>下面按 55 岁以下税务居民算：只扣劳动所得减免 $1,000 和雇员公积金减免（月薪的 20%，按 2025 年普通工资上限每月 $7,400 封顶），没有花红、没有其他减免。你的情况不同，用上面的计算器按自己填。</p>
+<table class="tax-table">
+<thead><tr><th>月薪</th><th>年收入</th><th>应纳税所得额</th><th>一年税款</th><th>每月约</th><th>实际税率</th></tr></thead>
+<tbody>
+<tr><td>S$3,000</td><td>S$36,000</td><td>S$27,800</td><td>S$156</td><td>S$13</td><td>0.43%</td></tr>
+<tr><td>S$5,000</td><td>S$60,000</td><td>S$47,000</td><td>S$1,040</td><td>S$86.67</td><td>1.73%</td></tr>
+<tr><td>S$6,000</td><td>S$72,000</td><td>S$56,600</td><td>S$1,712</td><td>S$142.67</td><td>2.38%</td></tr>
+<tr><td>S$8,000</td><td>S$96,000</td><td>S$77,240</td><td>S$3,156.80</td><td>S$263.07</td><td>3.29%</td></tr>
+<tr><td>S$10,000</td><td>S$120,000</td><td>S$101,240</td><td>S$5,792.60</td><td>S$482.72</td><td>4.83%</td></tr>
+<tr><td>S$15,000</td><td>S$180,000</td><td>S$161,240</td><td>S$14,173.20</td><td>S$1,181.10</td><td>7.87%</td></tr>
+<tr><td>S$20,000</td><td>S$240,000</td><td>S$221,240</td><td>S$25,185.60</td><td>S$2,098.80</td><td>10.49%</td></tr>
+</tbody>
+</table>
+
+<h2>YA2026 税率表（税务居民）</h2>
+<p>税率从 YA2024 起没变过，YA2026 沿用同一张表。只对落进那一档的收入收那个税率，不是全部收入都按最高那档算。</p>
+<table class="tax-table">
+<thead><tr><th>应纳税所得额</th><th>税率</th></tr></thead>
+<tbody>
+<tr><td>头 S$20,000</td><td>0%</td></tr>
+<tr><td>接下来 S$10,000（到 S$30,000）</td><td>2%</td></tr>
+<tr><td>接下来 S$10,000（到 S$40,000）</td><td>3.5%</td></tr>
+<tr><td>接下来 S$40,000（到 S$80,000）</td><td>7%</td></tr>
+<tr><td>接下来 S$40,000（到 S$120,000）</td><td>11.5%</td></tr>
+<tr><td>接下来 S$40,000（到 S$160,000）</td><td>15%</td></tr>
+<tr><td>接下来 S$40,000（到 S$200,000）</td><td>18%</td></tr>
+<tr><td>接下来 S$40,000（到 S$240,000）</td><td>19%</td></tr>
+<tr><td>接下来 S$40,000（到 S$280,000）</td><td>19.5%</td></tr>
+<tr><td>接下来 S$40,000（到 S$320,000）</td><td>20%</td></tr>
+<tr><td>接下来 S$180,000（到 S$500,000）</td><td>22%</td></tr>
+<tr><td>接下来 S$500,000（到 S$1,000,000）</td><td>23%</td></tr>
+<tr><td>S$1,000,000 以上</td><td>24%</td></tr>
+</tbody>
+</table>
+<p style="font-size:16px;color:#5A4E40">税率来源：新加坡税务局 IRAS，YA2024 起适用。YA2026 没有个人所得税回扣。</p>
+
+<h2>怎么算的</h2>
+<p>三步：第一步，年收入是 12 个月工资加花红；第二步，减掉减免总额（上限 $80,000），得到应纳税所得额；第三步，应纳税所得额按上面的税率表一档一档算，加起来就是一年要交的税。实际税率是税款除以年收入，边际税率是你多赚一块钱要交的税率。</p>
+
+<section class="faq"><h2>常见问题</h2><h3>YA2026 是哪一年的收入？</h3><p>YA2026 税的是 2025 年赚的收入。新加坡的课税年度（Year of Assessment）看的是前一年：YA2026 对应 2025 年 1 月 1 日到 12 月 31 日的收入，2026 年报税。</p><h3>非居民在新加坡怎么交税？</h3><p>非居民的受雇收入按 15% 的固定税率，或者按居民累进税率，两者取高的那一个，没有个人减免。在新加坡工作 60 天或以下的短期外国雇员不用交税，董事、艺人和专业人士除外。这个计算器按税务居民算。</p><h3>减免最多能扣多少？</h3><p>全部个人减免加起来每年上限 80,000 新元，只有税务居民能申请。常见的减免有劳动所得减免、公积金减免、配偶减免、子女减免、父母减免、SRS 减免和公积金现金填补减免。YA2026 没有个人所得税回扣。</p></section>
+<p style="font-size:15px;color:#8A7D6B">本页结果只是估算，不是税务建议。税率和减免以新加坡税务局 IRAS 公布的为准，报税前请以 IRAS 的税单和 myTax Portal 为准。</p>
+<section class="related"><h2>继续读</h2><ul><li><a href="malaixiya-geshui-jisuanqi.html">马来西亚个人所得税计算器（YA2025）</a></li><li><a href="xinjiapo-mai-cha.html">新加坡买茶全指南</a></li><li><a href="malesiya-mai-cha.html">马来西亚买茶全指南</a></li></ul></section>
+<p><a href="index.html">← 回到首页</a></p>
+</main>
+<footer><div class="wrap"><p>慢茶 Tea &amp; Stillness 中文版 — 写给海外华人的中国茶。本站只分享茶文化与日常泡茶做法，不卖茶，不提供医疗建议。</p><p><a href="index.html">首页</a> · <a href="start-here.html">新手入门</a> · <a href="tea-brewing-timer.html">泡茶计时器</a> · <a href="faq.html">常见问题</a> · <a href="about.html">关于本站</a> · <a href="xinjiapo-mai-cha.html">新加坡买茶</a> · <a href="https://calmsteep.com/">English version</a></p></div></footer>
+<script>
+var SG_BRACKETS = [[20000,0],[10000,0.02],[10000,0.035],[40000,0.07],[40000,0.115],[40000,0.15],[40000,0.18],[40000,0.19],[40000,0.195],[40000,0.20],[180000,0.22],[500000,0.23],[Infinity,0.24]];
+function sgMoney(n){ return "S$" + n.toLocaleString("en-SG", {minimumFractionDigits: 0, maximumFractionDigits: 2}); }
+function sgTax(chargeable){
+  var tax = 0, rows = [], left = chargeable, lower = 0, marginal = 0;
+  for (var i = 0; i < SG_BRACKETS.length; i++){
+    var width = SG_BRACKETS[i][0], rate = SG_BRACKETS[i][1];
+    var inBand = Math.min(left, width);
+    if (inBand > 0){
+      var t = inBand * rate;
+      tax += t;
+      rows.push({from: lower, to: lower + inBand, rate: rate, tax: t});
+      if (left <= width) marginal = rate;
+      lower += inBand; left -= inBand;
+    }
+    if (left <= 0) break;
+  }
+  return {tax: tax, marginal: marginal, rows: rows};
+}
+document.getElementById("calcBtn").onclick = function(){
+  var salary = parseFloat(document.getElementById("inSalary").value) || 0;
+  var bonus = parseFloat(document.getElementById("inBonus").value) || 0;
+  var relief = parseFloat(document.getElementById("inRelief").value) || 0;
+  if (salary <= 0){ alert("请先填每月工资。"); return; }
+  var annual = salary * 12 + bonus;
+  relief = Math.min(Math.max(0, relief), 80000);
+  var chargeable = Math.max(0, annual - relief);
+  var r = sgTax(chargeable);
+  var eff = annual > 0 ? (r.tax / annual * 100) : 0;
+  document.getElementById("rTax").textContent = sgMoney(Math.round(r.tax * 100) / 100);
+  document.getElementById("rTaxNote").textContent = "一年应缴税款（YA2026）";
+  var lines = "年总收入 " + sgMoney(annual) + " － 减免 " + sgMoney(relief) + " ＝ 应纳税所得额 " + sgMoney(chargeable) + "。每月约交 " + sgMoney(Math.round(r.tax / 12 * 100) / 100) + "，实际税率 " + eff.toFixed(2) + "%，边际税率 " + (r.marginal * 100) + "%。";
+  document.getElementById("rLines").textContent = lines;
+  var tb = document.getElementById("rBands");
+  var body = tb.querySelector("tbody");
+  body.innerHTML = "";
+  r.rows.forEach(function(row){
+    if (row.tax <= 0) return;
+    var tr = document.createElement("tr");
+    var c1 = document.createElement("td"); c1.textContent = sgMoney(row.from) + " – " + sgMoney(row.to);
+    var c2 = document.createElement("td"); c2.textContent = (row.rate * 100) + "%";
+    var c3 = document.createElement("td"); c3.textContent = sgMoney(Math.round(row.tax * 100) / 100);
+    tr.appendChild(c1); tr.appendChild(c2); tr.appendChild(c3);
+    body.appendChild(tr);
+  });
+  tb.style.display = body.children.length ? "" : "none";
+  document.getElementById("resultBox").style.display = "block";
+  document.getElementById("resultBox").scrollIntoView({behavior: "smooth", block: "start"});
+};
+</script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>

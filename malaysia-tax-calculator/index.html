@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2XYRVKWTV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E2XYRVKWTV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>马来西亚个人所得税计算器（YA2025）：算算你一年要交多少税 | 慢茶中文版</title>
+<meta name="description" content="免费马来西亚个税计算器，按 LHDN YA2025 税率：输入月薪和花红，自动算 EPF 减免和个人减免，给出应纳税所得额、应缴税款、实际税率和每月税款。附常见月薪速查表和完整税率表。">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "马来西亚个人所得税计算器", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0"}, "description": "免费马来西亚个税计算器，按 LHDN YA2025 税率：输入月薪和花红，自动算 EPF 减免和个人减免，给出应纳税所得额、应缴税款、实际税率和每月税款。", "url": "https://cn.calmsteep.com/malaixiya-geshui-jisuanqi.html", "inLanguage": "zh-CN"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"YA2025 是哪一年的收入？","acceptedAnswer":{"@type":"Answer","text":"YA2025 税的是 2025 年赚的收入，2026 年 4 月 30 日前报税。马来西亚的课税年度（Year of Assessment）看的是前一年，2026 年财政预算案维持了这张税率表，YA2026 也沿用。"}},{"@type":"Question","name":"EPF 减免是怎么算的？","acceptedAnswer":{"@type":"Answer","text":"雇员每月交 11% 的工资进 EPF（公积金），这部分可以抵税，但和人寿保险加起来每年最多扣 RM 4,000。雇主另外交 13%（月薪 RM 5,000 及以下）或 12%（月薪 RM 5,000 以上），雇主交的不算你的减免。"}},{"@type":"Question","name":"非居民在马来西亚怎么交税？","acceptedAnswer":{"@type":"Answer","text":"非居民按 30% 的固定税率交，没有个人减免。这个计算器按税务居民算。"}},{"@type":"Question","name":"应纳税所得额 3 万 5 以下有回扣吗？","acceptedAnswer":{"@type":"Answer","text":"有。应纳税所得额不超过 RM 35,000 的，税款直接减 RM 400，减完不够扣的按 0 算。"}}]}</script>
+<link rel="canonical" href="https://cn.calmsteep.com/malaixiya-geshui-jisuanqi.html">
+<meta property="og:title" content="马来西亚个人所得税计算器（YA2025）：算算你一年要交多少税 | 慢茶中文版">
+<meta property="og:description" content="免费马来西亚个税计算器，按 LHDN YA2025 税率：输入月薪和花红，自动算 EPF 减免和个人减免，给出应纳税所得额、应缴税款、实际税率和每月税款。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cn.calmsteep.com/malaixiya-geshui-jisuanqi.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="马来西亚个人所得税计算器（YA2025）：算算你一年要交多少税 | 慢茶中文版">
+<meta name="twitter:description" content="免费马来西亚个税计算器，按 LHDN YA2025 税率：输入月薪和花红，自动算 EPF 减免和个人减免，给出应纳税所得额、应缴税款、实际税率和每月税款。">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://cn.calmsteep.com/"},{"@type":"ListItem","position":2,"name":"马来西亚个人所得税计算器","item":"https://cn.calmsteep.com/malaixiya-geshui-jisuanqi.html"}]}</script>
+<style>
+.calc-box{border:1px solid #E8E0D2;background:#fff;border-radius:4px;padding:22px 20px;margin:18px 0}
+.calc-row{margin:14px 0}
+.calc-row label{display:block;font-size:17px;margin-bottom:6px}
+.calc-row input{font-family:inherit;font-size:17px;padding:10px 12px;border:1px solid #D8CFBC;border-radius:4px;width:100%;max-width:340px;box-sizing:border-box}
+.calc-hint{font-size:15px;color:#8A7D6B;margin-top:4px}
+.calc-btn{font-family:inherit;font-size:17px;background:#8A3B2E;border:1px solid #8A3B2E;color:#FDFCF9;border-radius:4px;padding:11px 26px;cursor:pointer;margin-top:6px}
+.result{display:none;border:1px solid #E8E0D2;background:#FDFCF9;border-radius:4px;padding:20px;margin:18px 0}
+.result .big{font-size:34px;color:#8A3B2E;line-height:1.2}
+.result .sub{font-size:16px;color:#5A4E40;margin-top:4px}
+.result table{margin-top:14px}
+.tax-table{width:100%;border-collapse:collapse;font-size:16px;margin:14px 0}
+.tax-table th,.tax-table td{border:1px solid #E8E0D2;padding:8px 10px;text-align:left}
+.tax-table th{background:#F0EADD}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-in"><a class="brand" href="index.html">慢茶<span>TEA &amp; STILLNESS</span></a><nav class="nav"><a href="index.html">首页</a><a href="start-here.html">新手入门</a><a href="tea-brewing-timer.html">泡茶计时器</a><a href="faq.html">常见问题</a><a href="about.html">关于本站</a><a href="https://calmsteep.com/">English version</a></nav></div></header>
+<div class="wrap pagehead"><p class="kicker">新马生活工具</p><h1>马来西亚个人所得税计算器</h1><p class="lede">按马来西亚内陆税收局 LHDN 的 YA2025 税率，输入月薪和花红，算出你一年要交多少税。个人减免 RM 9,000 和 EPF 减免自动算好，不用自己查表。</p></div>
+<main>
+<p>在马来西亚打工，税是按“应纳税所得额”算的：年收入先减掉个人减免 RM 9,000，再减掉 EPF 减免（雇员交的 11%，每年最多扣 RM 4,000），剩下的部分按 0% 到 30% 的累进税率一档一档算。头 RM 5,000 不用交税。YA2025 税的是 2025 年赚的收入，2026 年 4 月 30 日前报税。</p>
+
+<div class="calc-box">
+<div class="calc-row"><label for="inSalary">每月工资（令吉 RM）</label><input id="inSalary" type="number" min="0" step="1" inputmode="decimal" placeholder="例如 5000"><p class="calc-hint">税前月薪，不含花红。</p></div>
+<div class="calc-row"><label for="inBonus">年终花红（令吉 RM，可选）</label><input id="inBonus" type="number" min="0" step="1" inputmode="decimal" placeholder="没有填 0"><p class="calc-hint">一年拿到的花红总数，没有就填 0。</p></div>
+<div class="calc-row"><label for="inRelief">其他减免（令吉 RM，可选）</label><input id="inRelief" type="number" min="0" step="1" inputmode="decimal" value="0"><p class="calc-hint">配偶 RM 4,000、子女每人 RM 2,000、生活方式 RM 2,500 等加总填这里。个人减免 RM 9,000 和 EPF 减免已经自动算好，不用再填。</p></div>
+<button class="calc-btn" id="calcBtn" type="button">算一下要交多少税</button>
+</div>
+
+<div class="result" id="resultBox">
+<div class="big" id="rTax">—</div>
+<div class="sub" id="rTaxNote">一年应缴税款</div>
+<p id="rLines" style="margin-top:14px"></p>
+<table class="tax-table" id="rBands" style="display:none"><thead><tr><th>档位</th><th>税率</th><th>这档的税</th></tr></thead><tbody></tbody></table>
+</div>
+
+<h2>常见月薪要交多少税（YA2025）</h2>
+<p>下面按税务居民算：只扣个人减免 RM 9,000 和 EPF 减免（年收入的 11%，上限 RM 4,000），没有花红、没有其他减免。你的情况不同，用上面的计算器按自己填。</p>
+<table class="tax-table">
+<thead><tr><th>月薪</th><th>年收入</th><th>应纳税所得额</th><th>一年税款</th><th>每月约</th><th>实际税率</th></tr></thead>
+<tbody>
+<tr><td>RM 3,000</td><td>RM 36,000</td><td>RM 23,040</td><td>RM 0</td><td>RM 0</td><td>0%</td></tr>
+<tr><td>RM 5,000</td><td>RM 60,000</td><td>RM 47,000</td><td>RM 1,320</td><td>RM 110</td><td>2.20%</td></tr>
+<tr><td>RM 8,000</td><td>RM 96,000</td><td>RM 83,000</td><td>RM 6,170</td><td>RM 514.17</td><td>6.43%</td></tr>
+<tr><td>RM 10,000</td><td>RM 120,000</td><td>RM 107,000</td><td>RM 11,150</td><td>RM 929.17</td><td>9.29%</td></tr>
+<tr><td>RM 15,000</td><td>RM 180,000</td><td>RM 167,000</td><td>RM 26,150</td><td>RM 2,179.17</td><td>14.53%</td></tr>
+</tbody>
+</table>
+
+<h2>YA2025 税率表（税务居民）</h2>
+<p>2026 年财政预算案维持了这张税率表，YA2026 也沿用。只对落进那一档的收入收那个税率，不是全部收入都按最高那档算。</p>
+<table class="tax-table">
+<thead><tr><th>应纳税所得额</th><th>税率</th></tr></thead>
+<tbody>
+<tr><td>头 RM 5,000</td><td>0%</td></tr>
+<tr><td>接下来 RM 15,000（到 RM 20,000）</td><td>1%</td></tr>
+<tr><td>接下来 RM 15,000（到 RM 35,000）</td><td>3%</td></tr>
+<tr><td>接下来 RM 15,000（到 RM 50,000）</td><td>6%</td></tr>
+<tr><td>接下来 RM 20,000（到 RM 70,000）</td><td>11%</td></tr>
+<tr><td>接下来 RM 30,000（到 RM 100,000）</td><td>19%</td></tr>
+<tr><td>接下来 RM 300,000（到 RM 400,000）</td><td>25%</td></tr>
+<tr><td>接下来 RM 200,000（到 RM 600,000）</td><td>26%</td></tr>
+<tr><td>接下来 RM 1,400,000（到 RM 2,000,000）</td><td>28%</td></tr>
+<tr><td>RM 2,000,000 以上</td><td>30%</td></tr>
+</tbody>
+</table>
+<p style="font-size:16px;color:#5A4E40">税率来源：马来西亚内陆税收局 LHDN。应纳税所得额不超过 RM 35,000 的，税款再减 RM 400 回扣。</p>
+
+<h2>怎么算的</h2>
+<p>四步：第一步，年收入是 12 个月工资加花红；第二步，减掉个人减免 RM 9,000、EPF 减免（年收入的 11%，上限 RM 4,000）和其他减免，得到应纳税所得额；第三步，应纳税所得额按上面的税率表一档一档算；第四步，应纳税所得额不超过 RM 35,000 的，税款再减 RM 400。实际税率是税款除以年收入，边际税率是你多赚一块钱要交的税率。</p>
+
+<section class="faq"><h2>常见问题</h2><h3>YA2025 是哪一年的收入？</h3><p>YA2025 税的是 2025 年赚的收入，2026 年 4 月 30 日前报税。马来西亚的课税年度（Year of Assessment）看的是前一年，2026 年财政预算案维持了这张税率表，YA2026 也沿用。</p><h3>EPF 减免是怎么算的？</h3><p>雇员每月交 11% 的工资进 EPF（公积金），这部分可以抵税，但和人寿保险加起来每年最多扣 RM 4,000。雇主另外交 13%（月薪 RM 5,000 及以下）或 12%（月薪 RM 5,000 以上），雇主交的不算你的减免。</p><h3>非居民在马来西亚怎么交税？</h3><p>非居民按 30% 的固定税率交，没有个人减免。这个计算器按税务居民算。</p><h3>应纳税所得额 3 万 5 以下有回扣吗？</h3><p>有。应纳税所得额不超过 RM 35,000 的，税款直接减 RM 400，减完不够扣的按 0 算。</p></section>
+<p style="font-size:15px;color:#8A7D6B">本页结果只是估算，不是税务建议。税率和减免以马来西亚内陆税收局 LHDN 公布的为准，报税前请以 LHDN 的税单为准。</p>
+<section class="related"><h2>继续读</h2><ul><li><a href="xinjiapo-geshui-jisuanqi.html">新加坡个人所得税计算器（YA2026）</a></li><li><a href="malesiya-mai-cha.html">马来西亚买茶全指南</a></li><li><a href="xinjiapo-mai-cha.html">新加坡买茶全指南</a></li></ul></section>
+<p><a href="index.html">← 回到首页</a></p>
+</main>
+<footer><div class="wrap"><p>慢茶 Tea &amp; Stillness 中文版 — 写给海外华人的中国茶。本站只分享茶文化与日常泡茶做法，不卖茶，不提供医疗建议。</p><p><a href="index.html">首页</a> · <a href="start-here.html">新手入门</a> · <a href="tea-brewing-timer.html">泡茶计时器</a> · <a href="faq.html">常见问题</a> · <a href="about.html">关于本站</a> · <a href="malesiya-mai-cha.html">马来西亚买茶</a> · <a href="https://calmsteep.com/">English version</a></p></div></footer>
+<script>
+var MY_BRACKETS = [[5000,0],[15000,0.01],[15000,0.03],[15000,0.06],[20000,0.11],[30000,0.19],[300000,0.25],[200000,0.26],[1400000,0.28],[Infinity,0.30]];
+function myMoney(n){ return "RM " + n.toLocaleString("en-MY", {minimumFractionDigits: 0, maximumFractionDigits: 2}); }
+function myTax(chargeable){
+  var tax = 0, rows = [], left = chargeable, lower = 0, marginal = 0;
+  for (var i = 0; i < MY_BRACKETS.length; i++){
+    var width = MY_BRACKETS[i][0], rate = MY_BRACKETS[i][1];
+    var inBand = Math.min(left, width);
+    if (inBand > 0){
+      var t = inBand * rate;
+      tax += t;
+      rows.push({from: lower, to: lower + inBand, rate: rate, tax: t});
+      if (left <= width) marginal = rate;
+      lower += inBand; left -= inBand;
+    }
+    if (left <= 0) break;
+  }
+  if (chargeable > 0 && chargeable <= 35000) tax = Math.max(0, tax - 400);
+  return {tax: tax, marginal: marginal, rows: rows};
+}
+document.getElementById("calcBtn").onclick = function(){
+  var salary = parseFloat(document.getElementById("inSalary").value) || 0;
+  var bonus = parseFloat(document.getElementById("inBonus").value) || 0;
+  var other = parseFloat(document.getElementById("inRelief").value) || 0;
+  if (salary <= 0){ alert("请先填每月工资。"); return; }
+  var annual = salary * 12 + bonus;
+  var epfRelief = Math.min(annual * 0.11, 4000);
+  var personalRelief = 9000;
+  var chargeable = Math.max(0, annual - personalRelief - epfRelief - Math.max(0, other));
+  var r = myTax(chargeable);
+  var eff = annual > 0 ? (r.tax / annual * 100) : 0;
+  document.getElementById("rTax").textContent = myMoney(Math.round(r.tax * 100) / 100);
+  document.getElementById("rTaxNote").textContent = "一年应缴税款（YA2025）";
+  var rebateNote = (chargeable > 0 && chargeable <= 35000) ? "已扣 RM 400 回扣。" : "";
+  var lines = "年总收入 " + myMoney(annual) + " － 个人减免 RM 9,000 － EPF 减免 " + myMoney(Math.round(epfRelief * 100) / 100) + " － 其他减免 " + myMoney(Math.max(0, other)) + " ＝ 应纳税所得额 " + myMoney(chargeable) + "。每月约交 " + myMoney(Math.round(r.tax / 12 * 100) / 100) + "，实际税率 " + eff.toFixed(2) + "%，边际税率 " + (r.marginal * 100) + "%。" + rebateNote;
+  document.getElementById("rLines").textContent = lines;
+  var tb = document.getElementById("rBands");
+  var body = tb.querySelector("tbody");
+  body.innerHTML = "";
+  r.rows.forEach(function(row){
+    if (row.tax <= 0) return;
+    var tr = document.createElement("tr");
+    var c1 = document.createElement("td"); c1.textContent = myMoney(row.from) + " – " + myMoney(row.to);
+    var c2 = document.createElement("td"); c2.textContent = (row.rate * 100) + "%";
+    var c3 = document.createElement("td"); c3.textContent = myMoney(Math.round(row.tax * 100) / 100);
+    tr.appendChild(c1); tr.appendChild(c2); tr.appendChild(c3);
+    body.appendChild(tr);
+  });
+  tb.style.display = body.children.length ? "" : "none";
+  document.getElementById("resultBox").style.display = "block";
+  document.getElementById("resultBox").scrollIntoView({behavior: "smooth", block: "start"});
+};
+</script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>

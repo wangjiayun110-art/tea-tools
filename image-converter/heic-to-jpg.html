@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5R24E2HTXV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5R24E2HTXV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>HEIC to JPG Converter — Free, In Your Browser | Tea &amp; Stillness</title>
+<meta name="description" content="Convert iPhone HEIC photos to JPG free in your browser. Drop in your .heic files and download JPGs — no upload, no sign-up, no watermark. Your files never leave your device.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"HEIC to JPG Converter","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Convert iPhone HEIC photos to JPG free in your browser. Files never leave your device.","url":"https://calmsteep.com/heic-to-jpg.html","image":"https://calmsteep.com/images/cover-brew.webp"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a HEIC file?","acceptedAnswer":{"@type":"Answer","text":"HEIC is the photo format iPhones save by default since iOS 11. A HEIC photo is about half the size of the same photo as a JPG, but many Windows programs, Android apps and upload forms cannot open it. That is the whole problem: good photos, awkward format."}},{"@type":"Question","name":"How do I stop my iPhone saving HEIC?","acceptedAnswer":{"@type":"Answer","text":"Go to Settings, then Camera, then Formats, and choose Most Compatible. New photos will save as JPG from then on. Photos already on your phone stay HEIC — convert those here."}},{"@type":"Question","name":"Are my photos uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The conversion runs entirely in your browser, on your own device. Nothing is uploaded, so private photos stay private."}},{"@type":"Question","name":"Will the JPG be as good as the HEIC?","acceptedAnswer":{"@type":"Answer","text":"Almost. JPG is lossy, so a little detail is lost, but at 85% quality the difference is hard to see. The JPG will be larger than the HEIC — that is the price of a format everything can open."}}]}</script>
+<link rel="canonical" href="https://calmsteep.com/heic-to-jpg.html">
+<meta property="og:title" content="HEIC to JPG Converter — Free, In Your Browser | Tea &amp; Stillness">
+<meta property="og:description" content="Convert iPhone HEIC photos to JPG free in your browser. Drop in your .heic files and download JPGs — no upload, no sign-up, no watermark.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calmsteep.com/heic-to-jpg.html">
+<meta property="og:image" content="https://calmsteep.com/images/cover-brew.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HEIC to JPG Converter — Free, In Your Browser | Tea &amp; Stillness">
+<meta name="twitter:description" content="Convert iPhone HEIC photos to JPG free in your browser. Drop in your .heic files and download JPGs — no upload, no sign-up, no watermark.">
+<meta name="twitter:image" content="https://calmsteep.com/images/cover-brew.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calmsteep.com/"},{"@type":"ListItem","position":2,"name":"HEIC to JPG Converter","item":"https://calmsteep.com/heic-to-jpg.html"}]}</script>
+<style>
+.ic-drop{border:2px dashed #C9B896;border-radius:12px;padding:38px 16px;text-align:center;cursor:pointer;font-size:19px;background:#fff;margin:18px 0}
+.ic-drop.drag{border-color:#7A5C3A;background:#FAF6EF}
+.ic-drop span{display:block;font-size:15px;color:#8A7D6B;margin-top:6px}
+.ic-out-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}
+.ic-out{font-family:Georgia,serif;font-size:16px;background:#fff;border:1px solid #C9B896;border-radius:999px;padding:8px 18px;cursor:pointer;color:#2B2620}
+.ic-out.active{background:#7A5C3A;border-color:#7A5C3A;color:#FAF6EF}
+.ic-quality-row{margin:10px 0;font-size:16px}
+.ic-quality{vertical-align:middle}
+.ic-convert{font-family:Georgia,serif;font-size:17px;background:#2B2620;border:1px solid #2B2620;color:#FAF6EF;border-radius:8px;padding:11px 26px;cursor:pointer}
+.ic-convert:disabled{opacity:.5;cursor:default}
+.ic-zip,.ic-clear{font-family:Georgia,serif;font-size:16px;background:#fff;border:1px solid #C9B896;border-radius:8px;padding:10px 18px;cursor:pointer;margin-left:8px}
+.ic-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #E5DCCB;padding:12px 0}
+.ic-name{font-size:16px}
+.ic-ok{font-size:15px;color:#7A5C3A;margin-top:2px}
+.ic-err{font-size:15px;color:#8A3B2E;margin-top:2px}
+.ic-wait{font-size:15px;color:#8A7D6B;margin-top:2px}
+.ic-dl{font-size:16px;color:#8A3B2E;white-space:nowrap}
+.ic-note{font-size:15px;color:#8A7D6B}
+.conv-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:17px}
+.conv-table th,.conv-table td{border-bottom:1px solid #E5DCCB;padding:10px 8px;text-align:left}
+.conv-table th{color:#8A7D6B;font-weight:normal;font-size:15px}
+@media (max-width:600px){.conv-table{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="site"><a href="index.html"><span class="mark">茶</span>Tea &amp; Stillness</a></div>
+<p class="tagline">Chinese tea, slowly</p><nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="faq.html">FAQ</a><a href="about.html">About</a></nav>
+<p class="tags"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><h1>HEIC to JPG Converter</h1><p class="lede">Your iPhone saved HEIC and now nothing on Windows will open it? Drop the files here and get JPGs back. Free, in your browser, nothing uploaded.</p></header>
+<main>
+<p>HEIC is the format iPhones save photos in by default, since iOS 11. A HEIC photo is about half the size of the same photo as a JPG — good for your phone's storage, bad for everything else. Windows, most Android apps, visa portals, job sites and government services cannot open HEIC, and they usually reject it without explaining why. The fix is a conversion.</p>
+
+<div data-converter data-preset-to="jpg">
+<div class="ic-drop" role="button" tabindex="0">Drop HEIC photos here, or click to choose<span>Up to 50 files, 50 MB each · .heic and .heif</span></div>
+<input class="ic-file" type="file" accept="image/*,.heic,.heif,.avif" multiple hidden>
+<div class="ic-out-row"><span>Convert to:</span>
+<button class="ic-out active" type="button" data-out="jpg">JPG</button>
+<button class="ic-out" type="button" data-out="png">PNG</button>
+<button class="ic-out" type="button" data-out="webp">WebP</button>
+</div>
+<div class="ic-quality-row"><label>Quality <input class="ic-quality" type="range" min="50" max="100" value="85"> <span class="ic-quality-val">85%</span></label><span style="font-size:15px;color:#8A7D6B"> · JPG and WebP only; PNG is always lossless</span></div>
+<button class="ic-convert" type="button" disabled>Convert</button>
+<button class="ic-zip" type="button" style="display:none">Download all (.zip)</button>
+<button class="ic-clear" type="button" style="display:none">Clear</button>
+<p class="ic-note"></p>
+<div class="ic-list"></div>
+</div>
+
+<h2>How to convert HEIC to JPG</h2>
+<p><strong>1. Drop your .heic files</strong> in the box above, or click it to choose them. Several at once is fine.</p>
+<p><strong>2. Press Convert.</strong> The first HEIC loads a small decoder (about 1.3 MB); after that each photo takes a second or two. Everything happens in your browser.</p>
+<p><strong>3. Download the JPGs</strong> one by one, or all at once as a zip.</p>
+
+<h2>Stop the problem at the source</h2>
+<p>Converting fixes the photos you already have. To stop new ones being HEIC, change one setting on your iPhone: Settings → Camera → Formats → Most Compatible. New photos will save as JPG from then on. Photos already on your phone stay HEIC — convert those here.</p>
+<p>One more thing converting does for you: it strips the EXIF metadata, including the GPS location, so the JPG does not reveal where the photo was taken.</p>
+
+<h2>HEIC vs JPG</h2>
+<table class="conv-table">
+<tr><th></th><th>HEIC (iPhone)</th><th>JPG</th></tr>
+<tr><td>File size</td><td>About half the size at the same quality</td><td>Larger</td></tr>
+<tr><td>Opens on</td><td>iPhone, Mac, newer software</td><td>Almost everything</td></tr>
+<tr><td>Upload forms</td><td>Usually rejected</td><td>Accepted</td></tr>
+<tr><td>Best for</td><td>Saving space on your phone</td><td>Sharing, uploading, printing</td></tr>
+</table>
+
+<h2>Questions people ask</h2>
+<h3>What is a HEIC file?</h3>
+<p>HEIC is the photo format iPhones save by default since iOS 11. A HEIC photo is about half the size of the same photo as a JPG, but many Windows programs, Android apps and upload forms cannot open it. That is the whole problem: good photos, awkward format.</p>
+<h3>How do I stop my iPhone saving HEIC?</h3>
+<p>Go to Settings, then Camera, then Formats, and choose Most Compatible. New photos will save as JPG from then on. Photos already on your phone stay HEIC — convert those here.</p>
+<h3>Are my photos uploaded to a server?</h3>
+<p>No. The conversion runs entirely in your browser, on your own device. Nothing is uploaded, so private photos stay private.</p>
+<h3>Will the JPG be as good as the HEIC?</h3>
+<p>Almost. JPG is lossy, so a little detail is lost, but at 85% quality the difference is hard to see. The JPG will be larger than the HEIC — that is the price of a format everything can open.</p>
+
+<section class="related"><h2>Keep reading</h2><ul><li><a href="image-converter.html">Free Image Converter — WebP, HEIC, PNG, JPG and more</a></li><li><a href="webp-to-jpg.html">WebP to JPG Converter — free, in your browser</a></li><li><a href="tea-brewing-timer.html">Tea Brewing Timer: How Long to Steep Each Tea</a></li></ul></section><p><a href="index.html">← Back to all articles</a></p>
+</main>
+<footer>
+<p class="tags tags-footer"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><p>Tea &amp; Stillness — Chinese tea culture and slow living. This site shares culture and everyday practice, not medical advice.</p><p><a href="index.html">All articles</a> · <a href="start-here.html">Start Here</a> · <a href="faq.html">FAQ</a> · <a href="about.html">About this site</a></p></footer>
+<script src="js/image-converter.js"></script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>

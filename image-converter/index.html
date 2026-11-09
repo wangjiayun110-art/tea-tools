@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5R24E2HTXV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5R24E2HTXV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Free Image Converter: WebP, HEIC, PNG, JPG to JPG, PNG or WebP | Tea &amp; Stillness</title>
+<meta name="description" content="Convert images free in your browser: WebP to JPG, HEIC to JPG, PNG to WebP and more. Your files never leave your device — no upload, no sign-up, no watermark.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Free Image Converter","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Convert images free in your browser: WebP to JPG, HEIC to JPG, PNG to WebP and more. Files never leave your device.","url":"https://calmsteep.com/image-converter.html","image":"https://calmsteep.com/images/cover-brew.webp"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the image converter really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no sign-up, no daily limit, and no watermark. Convert as many images as you like, up to 50 files at a time."}},{"@type":"Question","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The conversion runs entirely in your browser, on your own device. Your photos are never sent to a server, so ID photos, certificates and private pictures stay private."}},{"@type":"Question","name":"Can it convert iPhone HEIC photos?","acceptedAnswer":{"@type":"Answer","text":"Yes. iPhones save photos as HEIC by default, and many Windows programs and upload forms cannot open them. Drop the HEIC files here and get JPG or PNG back."}},{"@type":"Question","name":"Will converting lose quality?","acceptedAnswer":{"@type":"Answer","text":"JPG is lossy, so a JPG made from a WebP or HEIC loses a little detail — at 85% quality the difference is hard to see. PNG is lossless, so PNG output keeps every pixel. Converting to WebP usually makes the file smaller."}},{"@type":"Question","name":"Can I convert many images at once?","acceptedAnswer":{"@type":"Answer","text":"Yes, up to 50 files per batch. Convert them, then download each one or take them all as a single zip file."}}]}</script>
+<link rel="canonical" href="https://calmsteep.com/image-converter.html">
+<meta property="og:title" content="Free Image Converter: WebP, HEIC, PNG, JPG to JPG, PNG or WebP | Tea &amp; Stillness">
+<meta property="og:description" content="Convert images free in your browser: WebP to JPG, HEIC to JPG, PNG to WebP and more. Your files never leave your device — no upload, no sign-up, no watermark.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calmsteep.com/image-converter.html">
+<meta property="og:image" content="https://calmsteep.com/images/cover-brew.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image Converter: WebP, HEIC, PNG, JPG to JPG, PNG or WebP | Tea &amp; Stillness">
+<meta name="twitter:description" content="Convert images free in your browser: WebP to JPG, HEIC to JPG, PNG to WebP and more. Your files never leave your device — no upload, no sign-up, no watermark.">
+<meta name="twitter:image" content="https://calmsteep.com/images/cover-brew.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calmsteep.com/"},{"@type":"ListItem","position":2,"name":"Free Image Converter","item":"https://calmsteep.com/image-converter.html"}]}</script>
+<style>
+.ic-drop{border:2px dashed #C9B896;border-radius:12px;padding:38px 16px;text-align:center;cursor:pointer;font-size:19px;background:#fff;margin:18px 0}
+.ic-drop.drag{border-color:#7A5C3A;background:#FAF6EF}
+.ic-drop span{display:block;font-size:15px;color:#8A7D6B;margin-top:6px}
+.ic-out-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}
+.ic-out{font-family:Georgia,serif;font-size:16px;background:#fff;border:1px solid #C9B896;border-radius:999px;padding:8px 18px;cursor:pointer;color:#2B2620}
+.ic-out.active{background:#7A5C3A;border-color:#7A5C3A;color:#FAF6EF}
+.ic-quality-row{margin:10px 0;font-size:16px}
+.ic-quality{vertical-align:middle}
+.ic-convert{font-family:Georgia,serif;font-size:17px;background:#2B2620;border:1px solid #2B2620;color:#FAF6EF;border-radius:8px;padding:11px 26px;cursor:pointer}
+.ic-convert:disabled{opacity:.5;cursor:default}
+.ic-zip,.ic-clear{font-family:Georgia,serif;font-size:16px;background:#fff;border:1px solid #C9B896;border-radius:8px;padding:10px 18px;cursor:pointer;margin-left:8px}
+.ic-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #E5DCCB;padding:12px 0}
+.ic-name{font-size:16px}
+.ic-ok{font-size:15px;color:#7A5C3A;margin-top:2px}
+.ic-err{font-size:15px;color:#8A3B2E;margin-top:2px}
+.ic-wait{font-size:15px;color:#8A7D6B;margin-top:2px}
+.ic-dl{font-size:16px;color:#8A3B2E;white-space:nowrap}
+.ic-note{font-size:15px;color:#8A7D6B}
+.conv-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:17px}
+.conv-table th,.conv-table td{border-bottom:1px solid #E5DCCB;padding:10px 8px;text-align:left}
+.conv-table th{color:#8A7D6B;font-weight:normal;font-size:15px}
+@media (max-width:600px){.conv-table{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="site"><a href="index.html"><span class="mark">茶</span>Tea &amp; Stillness</a></div>
+<p class="tagline">Chinese tea, slowly</p><nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="faq.html">FAQ</a><a href="about.html">About</a></nav>
+<p class="tags"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><h1>Free Image Converter</h1><p class="lede">Drop in a WebP, HEIC, PNG or JPG, pick what you want back, and download it. Your files never leave your device — no upload, no sign-up, no watermark.</p></header>
+<main>
+<p>Most image problems are format problems. A photo saved from a website is WebP, and the upload form only takes JPG. An iPhone saves HEIC, and Windows cannot open it. The fix is a conversion, and it takes seconds — as long as you do not have to install anything or upload your photos to a stranger's server. This converter runs entirely in your browser.</p>
+
+<div data-converter data-preset-to="jpg">
+<div class="ic-drop" role="button" tabindex="0">Drop images here, or click to choose<span>Up to 50 files, 50 MB each · WebP, HEIC, PNG, JPG, AVIF, GIF, BMP</span></div>
+<input class="ic-file" type="file" accept="image/*,.heic,.heif,.avif" multiple hidden>
+<div class="ic-out-row"><span>Convert to:</span>
+<button class="ic-out active" type="button" data-out="jpg">JPG</button>
+<button class="ic-out" type="button" data-out="png">PNG</button>
+<button class="ic-out" type="button" data-out="webp">WebP</button>
+</div>
+<div class="ic-quality-row"><label>Quality <input class="ic-quality" type="range" min="50" max="100" value="85"> <span class="ic-quality-val">85%</span></label><span style="font-size:15px;color:#8A7D6B"> · JPG and WebP only; PNG is always lossless</span></div>
+<button class="ic-convert" type="button" disabled>Convert</button>
+<button class="ic-zip" type="button" style="display:none">Download all (.zip)</button>
+<button class="ic-clear" type="button" style="display:none">Clear</button>
+<p class="ic-note"></p>
+<div class="ic-list"></div>
+</div>
+
+<h2>What you can convert</h2>
+<table class="conv-table">
+<tr><th>From</th><th>To</th><th>Why</th></tr>
+<tr><td>WebP</td><td>JPG, PNG, WebP</td><td>WebP is small, but many upload forms and older programs still refuse it.</td></tr>
+<tr><td>HEIC (iPhone)</td><td>JPG, PNG, WebP</td><td>iPhones save HEIC by default. Windows, Android and most forms cannot open it.</td></tr>
+<tr><td>PNG</td><td>JPG, WebP</td><td>PNG files are large. JPG is a third of the size for photos; WebP is smaller still.</td></tr>
+<tr><td>JPG</td><td>PNG, WebP</td><td>For editing or for the web, where a smaller file loads faster.</td></tr>
+<tr><td>AVIF, GIF, BMP</td><td>JPG, PNG, WebP</td><td>For compatibility. GIF converts as a still image — the first frame only.</td></tr>
+</table>
+
+<h2>Why convert at all</h2>
+<p><strong>JPG opens everywhere.</strong> Every phone, every computer, every upload form accepts it. It is the safest choice when you are not sure what the other side accepts. The price is lossy compression: a JPG made from a WebP or HEIC loses a little detail, though at 85% quality the difference is hard to see.</p>
+<p><strong>WebP is the smallest.</strong> A WebP is usually 25–35% smaller than the same photo as a JPG, which is why websites serve it. Keep WebP for the web; convert to JPG when a form, an exam portal or an old program asks for it.</p>
+<p><strong>HEIC is the iPhone problem.</strong> Since iOS 11, iPhones save photos as HEIC to save space. The photos are good; the format is the problem. If you keep running into it, change it at the source: Settings → Camera → Formats → Most Compatible, and new photos will save as JPG. The photos already on your phone still need converting.</p>
+<p><strong>PNG is lossless.</strong> Converting to PNG keeps every pixel, which is what you want for screenshots, logos and anything you will edit again. The files are bigger — that is the trade.</p>
+
+<h2>Questions people ask</h2>
+<h3>Is this converter really free?</h3>
+<p>Yes. No sign-up, no daily limit, no watermark. Convert as many images as you like, up to 50 files at a time.</p>
+<h3>Are my photos uploaded anywhere?</h3>
+<p>No. The conversion runs entirely in your browser, on your own device. Your photos are never sent to a server, so ID photos, certificates and private pictures stay private. You can check the network tab in your browser's developer tools — nothing leaves.</p>
+<h3>Can it convert iPhone HEIC photos?</h3>
+<p>Yes. Drop the HEIC files here and get JPG or PNG back. The first HEIC conversion loads a small decoder (about 1.3 MB); after that each photo takes a second or two.</p>
+<h3>Will converting lose quality?</h3>
+<p>JPG is lossy, so a JPG made from a WebP or HEIC loses a little detail — at 85% quality the difference is hard to see. PNG is lossless, so PNG output keeps every pixel. Converting to WebP usually makes the file smaller.</p>
+<h3>Can I convert many images at once?</h3>
+<p>Yes, up to 50 files per batch. Convert them, then download each one or take them all as a single zip file.</p>
+
+<section class="related"><h2>Keep reading</h2><ul><li><a href="webp-to-jpg.html">WebP to JPG Converter — free, in your browser</a></li><li><a href="heic-to-jpg.html">HEIC to JPG Converter — free, in your browser</a></li><li><a href="tea-brewing-timer.html">Tea Brewing Timer: How Long to Steep Each Tea</a></li><li><a href="tea-leaf-ratio-calculator.html">Tea Leaf Calculator: How Much Tea Per Cup</a></li></ul></section><p><a href="index.html">← Back to all articles</a></p>
+</main>
+<footer>
+<p class="tags tags-footer"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><p>Tea &amp; Stillness — Chinese tea culture and slow living. This site shares culture and everyday practice, not medical advice.</p><p><a href="index.html">All articles</a> · <a href="start-here.html">Start Here</a> · <a href="faq.html">FAQ</a> · <a href="about.html">About this site</a></p></footer>
+<script src="js/image-converter.js"></script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>

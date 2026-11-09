@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5R24E2HTXV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5R24E2HTXV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Tea Leaf Calculator: How Much Tea Per Cup | Tea &amp; Stillness</title>
+<meta name="description" content="A free tea leaf calculator. Pick your tea and your pot, enter your water, and get the leaf amount in grams and teaspoons — for green, white, yellow, oolong, black and pu-erh.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tea Leaf Calculator","applicationCategory":"LifestyleApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"A free calculator that tells you how much loose-leaf tea to use for your water, or how much water for your leaves, for six kinds of Chinese tea.","url":"https://calmsteep.com/tea-leaf-ratio-calculator.html","image":"https://calmsteep.com/images/cover-brew.webp"}</script>
+<link rel="canonical" href="https://calmsteep.com/tea-leaf-ratio-calculator.html">
+<meta property="og:title" content="Tea Leaf Calculator: How Much Tea Per Cup | Tea &amp; Stillness">
+<meta property="og:description" content="A free tea leaf calculator. Pick your tea and your pot, enter your water, and get the leaf amount in grams and teaspoons — for green, white, yellow, oolong, black and pu-erh.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calmsteep.com/tea-leaf-ratio-calculator.html">
+<meta property="og:image" content="https://calmsteep.com/images/cover-brew.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tea Leaf Calculator: How Much Tea Per Cup | Tea &amp; Stillness">
+<meta name="twitter:description" content="A free tea leaf calculator. Pick your tea and your pot, enter your water, and get the leaf amount in grams and teaspoons — for green, white, yellow, oolong, black and pu-erh.">
+<meta name="twitter:image" content="https://calmsteep.com/images/cover-brew.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calmsteep.com/"},{"@type":"ListItem","position":2,"name":"Tea Leaf Calculator","item":"https://calmsteep.com/tea-leaf-ratio-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much tea should I use per cup?","acceptedAnswer":{"@type":"Answer","text":"About 2 grams of loose leaf per 250 ml mug for green, white and yellow tea, about 3 grams for oolong and pu-erh, and 2 to 3 grams for black tea. In a small gongfu pot, use about 5 grams per 100 ml and steep briefly instead."}},{"@type":"Question","name":"How many teaspoons is 2 grams of tea?","acceptedAnswer":{"@type":"Answer","text":"Roughly one generous teaspoon, but it varies: fluffy white tea weighs less per spoon, and tightly rolled oolong weighs more. A small kitchen scale is more reliable than a spoon, and it costs less than a bag of good tea."}},{"@type":"Question","name":"Does the tea-to-water ratio change for gongfu brewing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Gongfu brewing uses much more leaf and much less time: about 5 grams per 100 ml, with steeps of 20 to 45 seconds. The idea is many short infusions from the same leaves, instead of one long steep."}},{"@type":"Question","name":"My tea tastes bitter. Should I use less leaf?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, or cooler water. Bitterness most often comes from water that is too hot or a steep that ran too long, but too much leaf makes it worse. Try a little less leaf first, and keep the time and temperature the same, so you change one thing at a time."}}]}</script>
+<style>
+.tea-picker{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.tea-btn{font-family:Georgia,serif;font-size:17px;background:#fff;border:1px solid #C9B896;border-radius:999px;padding:9px 18px;cursor:pointer;color:#2B2620}
+.tea-btn:hover{border-color:#7A5C3A}
+.tea-btn.active{background:#7A5C3A;border-color:#7A5C3A;color:#FAF6EF}
+.mode-row{display:flex;gap:10px;margin:6px 0 18px;flex-wrap:wrap}
+.mode-btn{font-family:Georgia,serif;font-size:16px;background:#fff;border:1px solid #C9B896;border-radius:8px;padding:8px 16px;cursor:pointer;color:#2B2620}
+.mode-btn.active{background:#2B2620;border-color:#2B2620;color:#FAF6EF}
+.calc-box{border:1px solid #E5DCCB;background:#fff;border-radius:12px;padding:28px 20px;text-align:center;margin:18px 0}
+.calc-result{font-size:56px;line-height:1.1;color:#2B2620;font-variant-numeric:tabular-nums}
+.calc-sub{font-size:18px;color:#8A3B2E;margin-top:8px}
+.calc-note{font-size:16px;color:#8A7D6B;margin-top:6px}
+.input-row{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;margin:14px 0 4px}
+.input-row input{font-family:Georgia,serif;font-size:22px;width:110px;text-align:center;border:1px solid #C9B896;border-radius:8px;padding:8px 10px;color:#2B2620;background:#fff}
+.input-row span{font-size:18px;color:#2B2620}
+.quick-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0 4px}
+.quick-btn{font-family:Georgia,serif;font-size:15px;background:#fff;border:1px solid #C9B896;border-radius:999px;padding:6px 14px;cursor:pointer;color:#2B2620}
+.quick-btn.active{background:#7A5C3A;border-color:#7A5C3A;color:#FAF6EF}
+.ratio-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:17px}
+.ratio-table th,.ratio-table td{border-bottom:1px solid #E5DCCB;padding:10px 8px;text-align:left}
+.ratio-table th{color:#8A7D6B;font-weight:normal;font-size:15px}
+@media (max-width:600px){.calc-result{font-size:44px}.ratio-table{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="site"><a href="index.html"><span class="mark">茶</span>Tea &amp; Stillness</a></div>
+<p class="tagline">Chinese tea, slowly</p><nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="faq.html">FAQ</a><a href="about.html">About</a></nav>
+<p class="tags"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><h1>Tea Leaf Calculator</h1><p class="lede">How much tea per cup? Pick your tea, tell the calculator how much water you have — or how much leaf — and it gives you the other half. No sign-up, no app.</p></header>
+<main>
+<p>Most weak or bitter cups are not bad tea. They are the wrong ratio: too little leaf and the cup tastes like warm water, too much and it turns harsh. A tea leaf calculator fixes the guesswork, and once you have brewed the same tea twice at the right ratio, you will not need it again.</p>
+
+<h2>1. Choose your tea</h2>
+<div class="tea-picker" id="teaPicker"></div>
+
+<h2>2. Choose how you brew</h2>
+<div class="mode-row">
+<button class="mode-btn active" id="modeMug" type="button">Mug — one long steep</button>
+<button class="mode-btn" id="modeGongfu" type="button">Gongfu — small pot, short steeps</button>
+</div>
+
+<h2>3. How strong do you like it?</h2>
+<div class="mode-row">
+<button class="mode-btn" id="strLight" type="button">Light — a little less leaf</button>
+<button class="mode-btn active" id="strMedium" type="button">Medium — as listed</button>
+<button class="mode-btn" id="strStrong" type="button">Strong — a little more leaf</button>
+</div>
+
+<h2>4. Water or leaves — which do you have?</h2>
+<div class="mode-row">
+<button class="mode-btn active" id="dirWater" type="button">I have water → how much leaf?</button>
+<button class="mode-btn" id="dirLeaf" type="button">I have leaves → how much water?</button>
+</div>
+
+<div class="calc-box">
+<div id="waterInput">
+<div class="input-row"><input id="waterMl" type="number" min="50" max="2000" step="10" value="250" inputmode="numeric" aria-label="Water in millilitres"><span>ml of water</span></div>
+<div class="quick-row" id="waterQuick">
+<button class="quick-btn" type="button" data-ml="100">100 ml</button>
+<button class="quick-btn" type="button" data-ml="150">150 ml</button>
+<button class="quick-btn active" type="button" data-ml="250">250 ml</button>
+<button class="quick-btn" type="button" data-ml="350">350 ml</button>
+<button class="quick-btn" type="button" data-ml="500">500 ml</button>
+</div>
+</div>
+<div id="leafInput" style="display:none">
+<div class="input-row"><input id="leafG" type="number" min="1" max="50" step="0.5" value="3" inputmode="decimal" aria-label="Loose leaves in grams"><span>g of loose leaves</span></div>
+<div class="quick-row" id="leafQuick">
+<button class="quick-btn" type="button" data-g="2">2 g</button>
+<button class="quick-btn active" type="button" data-g="3">3 g</button>
+<button class="quick-btn" type="button" data-g="5">5 g</button>
+<button class="quick-btn" type="button" data-g="8">8 g</button>
+</div>
+</div>
+<div class="calc-result" id="calcResult">2 g</div>
+<div class="calc-sub" id="calcSub">about 1 generous teaspoon</div>
+<p class="calc-note" id="calcNote">Green Tea · Mug · Medium — 0.8 g of leaf per 100 ml of water.</p>
+</div>
+<p style="font-size:16px;color:#5A4E40">Teaspoons are a rough guide only: fluffy white tea weighs less per spoon, tightly rolled oolong weighs more. If you brew the same tea often, a small kitchen scale pays for itself in a week.</p>
+
+<h2>Tea-to-water ratios at a glance</h2>
+<p>These are starting points, not rules. Your leaves, your water and your taste will move them a little, and that is normal. Change one thing at a time — leaf, time or temperature — so you know what fixed the cup.</p>
+<table class="ratio-table">
+<tr><th>Tea</th><th>Mug (per 250 ml)</th><th>Gongfu (per 100 ml)</th></tr>
+<tr><td>Green tea</td><td>about 2 g</td><td>about 5 g</td></tr>
+<tr><td>White tea</td><td>about 2 g</td><td>about 5 g</td></tr>
+<tr><td>Yellow tea</td><td>about 2 g</td><td>about 5 g</td></tr>
+<tr><td>Oolong tea</td><td>about 3 g</td><td>about 5 g</td></tr>
+<tr><td>Black tea</td><td>about 2–3 g</td><td>about 5 g</td></tr>
+<tr><td>Pu-erh tea</td><td>about 3 g</td><td>about 5 g</td></tr>
+</table>
+<p>Gongfu brewing uses more leaf and much shorter steeps — 20 to 45 seconds at first, adding about 10 seconds each round — because the same leaves are steeped several times. A mug uses less leaf and one long steep of 2 to 3 minutes.</p>
+
+<h2>Why the ratio matters more than the tea</h2>
+<p>A good tea brewed at the wrong ratio still tastes wrong, and a plain tea brewed at the right ratio often tastes fine. That is the whole point of a tea leaf calculator: it takes the one variable beginners get wrong most often and turns it into a number. Once the ratio is right, the other two variables — water temperature and steeping time — are easier to feel your way into. And if a cup does come out bitter, reach for less leaf or cooler water first. A shorter steep is the last thing to try, not the first.</p>
+
+<h2>Questions beginners ask</h2>
+<h3>How much tea should I use per cup?</h3>
+<p>About 2 grams of loose leaf per 250 ml mug for green, white and yellow tea, about 3 grams for oolong and pu-erh, and 2 to 3 grams for black tea. In a small gongfu pot, use about 5 grams per 100 ml and steep briefly instead.</p>
+<h3>How many teaspoons is 2 grams of tea?</h3>
+<p>Roughly one generous teaspoon, but it varies: fluffy white tea weighs less per spoon, and tightly rolled oolong weighs more. A small kitchen scale is more reliable than a spoon, and it costs less than a bag of good tea.</p>
+<h3>Does the tea-to-water ratio change for gongfu brewing?</h3>
+<p>Yes. Gongfu brewing uses much more leaf and much less time: about 5 grams per 100 ml, with steeps of 20 to 45 seconds. The idea is many short infusions from the same leaves, instead of one long steep.</p>
+<h3>My tea tastes bitter. Should I use less leaf?</h3>
+<p>Usually yes, or cooler water. Bitterness most often comes from water that is too hot or a steep that ran too long, but too much leaf makes it worse. Try a little less leaf first, and keep the time and temperature the same, so you change one thing at a time.</p>
+
+<section class="related"><h2>Keep reading</h2><ul><li><a href="tea-brewing-timer.html">Tea Brewing Timer: How Long to Steep Each Tea</a></li><li><a href="how-to-brew-chinese-tea.html">How to Brew Chinese Tea for Beginners</a></li><li><a href="gongfu-vs-mug-brewing.html">Gongfu vs Mug Brewing: Which Way Suits You?</a></li><li><a href="six-kinds-chinese-tea.html">The Six Kinds of Chinese Tea, in Plain Words</a></li></ul></section><p><a href="index.html">← Back to all articles</a></p>
+</main>
+<footer>
+<p class="tags tags-footer"><a href="green-tea-beginners.html">Green Tea</a> <a href="oolong-tea-beginners.html">Oolong Tea</a> <a href="black-tea-beginners.html">Black Tea</a> <a href="white-tea-beginners.html">White Tea</a> <a href="yellow-tea-beginners.html">Yellow Tea</a> <a href="pu-erh-sheng-vs-shou.html">Pu-erh</a> <a href="gongfu-vs-mug-brewing.html">Gongfu Brewing</a> <a href="how-to-store-tea.html">Tea Storage</a> <a href="chinese-teaware-beginners.html">Teaware</a> <a href="tea-food-pairing-beginners.html">Tea &amp; Food</a></p><p>Tea &amp; Stillness — Chinese tea culture and slow living. This site shares culture and everyday practice, not medical advice.</p><p><a href="index.html">All articles</a> · <a href="start-here.html">Start Here</a> · <a href="faq.html">FAQ</a> · <a href="about.html">About this site</a></p></footer>
+<script>
+var TEAS = {
+  green:  {name: "Green Tea",  mug: 0.8, gongfu: 5},
+  white:  {name: "White Tea",  mug: 0.8, gongfu: 5},
+  yellow: {name: "Yellow Tea", mug: 0.8, gongfu: 5},
+  oolong: {name: "Oolong Tea", mug: 1.2, gongfu: 5},
+  black:  {name: "Black Tea",  mug: 1.0, gongfu: 5},
+  puerh:  {name: "Pu-erh Tea", mug: 1.2, gongfu: 5}
+};
+var ORDER = ["green", "white", "yellow", "oolong", "black", "puerh"];
+var tea = "green", mode = "mug", dir = "water", strength = 1;
+
+function ratio(){ return TEAS[tea][mode] * strength; }
+function roundHalf(x){ return Math.round(x * 2) / 2; }
+function tsp(g){ var t = g / 2; var r = Math.round(t * 2) / 2; if (r <= 0) return "a pinch"; if (r === 1) return "about 1 generous teaspoon"; var s = (r % 1 === 0) ? r : r.toFixed(1); return "about " + s + " teaspoons"; }
+function render(){
+  var r = ratio();
+  var note = TEAS[tea].name + " · " + (mode === "mug" ? "Mug" : "Gongfu") + " · " + (strength === 0.75 ? "Light" : strength === 1.3 ? "Strong" : "Medium") + " — " + r.toFixed(1) + " g of leaf per 100 ml of water.";
+  document.getElementById("calcNote").textContent = note;
+  if (dir === "water") {
+    var ml = parseFloat(document.getElementById("waterMl").value);
+    if (!ml || ml <= 0) ml = 250;
+    var g = roundHalf(ml / 100 * r);
+    document.getElementById("calcResult").textContent = g + " g";
+    document.getElementById("calcSub").textContent = tsp(g) + " of loose leaves";
+  } else {
+    var lg = parseFloat(document.getElementById("leafG").value);
+    if (!lg || lg <= 0) lg = 3;
+    var w = Math.round(lg / r * 100 / 10) * 10;
+    document.getElementById("calcResult").textContent = w + " ml";
+    document.getElementById("calcSub").textContent = "of water for " + lg + " g of leaves";
+  }
+}
+function buildPicker(){
+  var p = document.getElementById("teaPicker");
+  ORDER.forEach(function(key){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "tea-btn" + (key === tea ? " active" : ""); b.textContent = TEAS[key].name;
+    b.onclick = function(){ tea = key; document.querySelectorAll(".tea-btn").forEach(function(x){ x.classList.remove("active"); }); b.classList.add("active"); render(); };
+    p.appendChild(b);
+  });
+}
+function setMode(m){
+  mode = m;
+  document.getElementById("modeMug").classList.toggle("active", m === "mug");
+  document.getElementById("modeGongfu").classList.toggle("active", m === "gongfu");
+  render();
+}
+function setStrength(f, btn){
+  strength = f;
+  ["strLight", "strMedium", "strStrong"].forEach(function(id){ document.getElementById(id).classList.remove("active"); });
+  btn.classList.add("active"); render();
+}
+function setDir(d){
+  dir = d;
+  document.getElementById("dirWater").classList.toggle("active", d === "water");
+  document.getElementById("dirLeaf").classList.toggle("active", d === "leaf");
+  document.getElementById("waterInput").style.display = d === "water" ? "block" : "none";
+  document.getElementById("leafInput").style.display = d === "leaf" ? "block" : "none";
+  render();
+}
+document.getElementById("modeMug").onclick = function(){ setMode("mug"); };
+document.getElementById("modeGongfu").onclick = function(){ setMode("gongfu"); };
+document.getElementById("strLight").onclick = function(){ setStrength(0.75, this); };
+document.getElementById("strMedium").onclick = function(){ setStrength(1, this); };
+document.getElementById("strStrong").onclick = function(){ setStrength(1.3, this); };
+document.getElementById("dirWater").onclick = function(){ setDir("water"); };
+document.getElementById("dirLeaf").onclick = function(){ setDir("leaf"); };
+document.getElementById("waterMl").addEventListener("input", render);
+document.getElementById("leafG").addEventListener("input", render);
+document.querySelectorAll("#waterQuick .quick-btn").forEach(function(b){
+  b.onclick = function(){
+    document.getElementById("waterMl").value = b.getAttribute("data-ml");
+    document.querySelectorAll("#waterQuick .quick-btn").forEach(function(x){ x.classList.remove("active"); });
+    b.classList.add("active"); render();
+  };
+});
+document.querySelectorAll("#leafQuick .quick-btn").forEach(function(b){
+  b.onclick = function(){
+    document.getElementById("leafG").value = b.getAttribute("data-g");
+    document.querySelectorAll("#leafQuick .quick-btn").forEach(function(x){ x.classList.remove("active"); });
+    b.classList.add("active"); render();
+  };
+});
+buildPicker();
+render();
+</script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>
