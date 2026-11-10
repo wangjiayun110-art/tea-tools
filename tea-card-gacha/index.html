@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2XYRVKWTV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E2XYRVKWTV');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>抽茶卡：免费抽一张今天的茶 | 慢茶中文版</title>
+<meta name="description" content="免费抽茶卡，不用注册。点一下抽一张，十连抽一次抽十张；每张卡都是一味真实的茶，带产地、水温、投茶量和浸泡时间。抽到的卡收进图鉴，存在你的浏览器里。">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "抽茶卡", "applicationCategory": "LifestyleApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0"}, "description": "免费抽茶卡：点一下抽一张，十连抽一次抽十张；每张卡都是一味真实的茶，带产地、水温、投茶量和浸泡时间。", "url": "https://cn.calmsteep.com/tea-card-gacha.html", "image": "https://cn.calmsteep.com/images/cover-brew.webp", "inLanguage": "zh-CN"}</script>
+<link rel="canonical" href="https://cn.calmsteep.com/tea-card-gacha.html">
+<link rel="alternate" hreflang="zh" href="https://cn.calmsteep.com/tea-card-gacha.html">
+<meta property="og:title" content="抽茶卡：免费抽一张今天的茶 | 慢茶中文版">
+<meta property="og:description" content="免费抽茶卡，不用注册。点一下抽一张，十连抽一次抽十张；每张卡都是一味真实的茶，带产地、水温、投茶量和浸泡时间。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cn.calmsteep.com/tea-card-gacha.html">
+<meta property="og:image" content="https://cn.calmsteep.com/images/cover-brew.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="抽茶卡：免费抽一张今天的茶 | 慢茶中文版">
+<meta name="twitter:description" content="免费抽茶卡，不用注册。点一下抽一张，十连抽一次抽十张；每张卡都是一味真实的茶，带产地、水温、投茶量和浸泡时间。">
+<meta name="twitter:image" content="https://cn.calmsteep.com/images/cover-brew.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://cn.calmsteep.com/"},{"@type":"ListItem","position":2,"name":"抽茶卡","item":"https://cn.calmsteep.com/tea-card-gacha.html"}]}</script>
+<style>
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.stat{border:1px solid #E8E0D2;background:#fff;border-radius:4px;padding:14px;text-align:center}
+.stat .v{font-size:28px;color:#8A3B2E;font-variant-numeric:tabular-nums}
+.stat .k{font-size:14px;color:#8A7D6B;margin-top:2px}
+.draw-row{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 6px}
+.draw-row button{font-family:inherit;font-size:18px;border-radius:4px;padding:13px 28px;cursor:pointer}
+.btn-draw{background:#8A3B2E;border:1px solid #8A3B2E;color:#FDFCF9}
+.btn-draw10{background:#2B2620;border:1px solid #1F1B16;color:#FDFCF9}
+.draw-note{font-size:15px;color:#8A7D6B}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:20px 0}
+.tcard{border:2px solid #D8CFBC;background:#fff;border-radius:8px;padding:16px 14px;animation:pop .35s ease both}
+.tcard .rarity{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;margin-bottom:8px}
+.tcard.r-R .rarity{background:#F0EADD;color:#7A5C3A}
+.tcard.r-SR{border-color:#4A5FA5}
+.tcard.r-SR .rarity{background:#4A5FA5;color:#fff}
+.tcard.r-SSR{border-color:#C9A227;box-shadow:0 0 0 3px rgba(201,162,39,.25),0 6px 24px rgba(201,162,39,.35)}
+.tcard.r-SSR .rarity{background:#C9A227;color:#fff}
+.tcard h3{font-size:20px;margin:0 0 2px}
+.tcard .origin{font-size:14px;color:#8A7D6B;margin-bottom:10px}
+.tcard .params{font-size:15px;line-height:1.7;color:#1F1B16}
+.tcard .params b{color:#8A3B2E}
+.tcard .fact{font-size:14px;color:#5A4E40;margin-top:10px;line-height:1.6}
+.tcard .go{font-size:14px;margin-top:10px}
+.tcard .go a{color:#8A3B2E}
+.tcard .count{font-size:13px;color:#8A7D6B;margin-top:8px}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes flash{0%{box-shadow:0 0 0 0 rgba(201,162,39,.7)}100%{box-shadow:0 0 0 18px rgba(201,162,39,0)}}
+.tcard.r-SSR{animation:pop .35s ease both,flash .8s ease-out 2}
+.album-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:16px 0}
+.acell{border:1px solid #E8E0D2;background:#fff;border-radius:6px;padding:12px 8px;text-align:center;font-size:14px}
+.acell .a-rar{font-size:12px;font-weight:700}
+.acell.owned-r-R{border-color:#D8CFBC}
+.acell.owned-r-SR{border-color:#4A5FA5;background:#F4F6FF}
+.acell.owned-r-SSR{border-color:#C9A227;background:#FFFBEA}
+.acell.locked{color:#B9AE9C;background:#FAF7F0}
+.acell .a-name{font-weight:700;margin-top:2px}
+.acell .a-num{font-size:12px;color:#8A7D6B}
+.progress{height:8px;background:#F0EADD;border-radius:4px;margin:12px 0 6px;overflow:hidden}
+.progress-bar{height:100%;background:#8A3B2E;width:0%}
+.faq h3{font-size:18px;margin:18px 0 4px}
+.faq p{margin:0 0 8px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}.stat .v{font-size:24px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "抽茶卡要钱吗？要注册吗？", "acceptedAnswer": {"@type": "Answer", "text": "不要钱，也不用注册。点一下就能抽，抽到的卡存在你的浏览器里。"}}, {"@type": "Question", "name": "抽到的卡存在哪里？", "acceptedAnswer": {"@type": "Answer", "text": "存在你这台设备浏览器的本地存储里。换设备、换浏览器，或者清掉浏览器数据，图鉴就会丢，需要重新抽。"}}, {"@type": "Question", "name": "稀有度是怎么分的？", "acceptedAnswer": {"@type": "Answer", "text": "R 是日常口粮茶，抽到概率约 70%；SR 是季节限定与名丛，约 25%；SSR 是稀有产地与老茶，约 5%。十连抽至少出一张 SR 以上。卡上的水温、投茶量和时间都按本站计时器的参数来。}}]}</script>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-in"><a class="brand" href="index.html">慢茶<span>TEA &amp; STILLNESS</span></a><nav class="nav"><a href="index.html">首页</a><a href="start-here.html">新手入门</a><a href="tea-brewing-timer.html">泡茶计时器</a><a href="faq.html">常见问题</a><a href="about.html">关于本站</a><a href="https://calmsteep.com/">English version</a></nav></div></header>
+<div class="wrap pagehead"><p class="kicker">慢茶中文版</p><h1>抽茶卡</h1><p class="lede">免费抽卡，不用注册。点一下抽一张，十连抽一次抽十张；每张卡都是一味真实的茶，带产地、水温、投茶量和浸泡时间，抽到喜欢的直接按参数泡一杯。</p></div>
+<main>
+<p>不知道今天喝什么，就让卡来定。卡池里一共 24 张卡：R 是日常口粮茶，SR 是季节限定与名丛，SSR 是稀有产地与老茶。十连抽至少出一张 SR 以上。</p>
+
+<div class="stats">
+<div class="stat"><div class="v" id="stDraws">0</div><div class="k">总抽数</div></div>
+<div class="stat"><div class="v" id="stOwned">0 / 24</div><div class="k">图鉴已收集</div></div>
+<div class="stat"><div class="v" id="stSsr">0</div><div class="k">SSR 数</div></div>
+<div class="stat"><div class="v" id="stAroma">0</div><div class="k">茶香值</div></div>
+</div>
+
+<div class="draw-row">
+<button class="btn-draw" id="draw1" type="button">抽一张</button>
+<button class="btn-draw10" id="draw10" type="button">十连抽</button>
+</div>
+<p class="draw-note">免费，不用注册。抽到的卡自动收进下面的图鉴，存在你的浏览器里。</p>
+
+<div class="cards" id="drawResult"></div>
+
+<h2>我的图鉴</h2>
+<div class="progress"><div class="progress-bar" id="albumBar"></div></div>
+<p id="albumText" style="font-size:15px;color:#8A7D6B">还没抽到任何卡，先抽一张试试。</p>
+<div class="album-grid" id="albumGrid"></div>
+<p><button class="btn-ghost" id="resetBtn" type="button" style="font-family:inherit;font-size:15px;background:#fff;border:1px solid #D8CFBC;border-radius:4px;padding:8px 18px;cursor:pointer">清空图鉴</button></p>
+
+<h2>抽到喜欢的茶，怎么泡？</h2>
+<p>卡上的水温、投茶量和时间都按本站计时器的参数来。去<a href="tea-brewing-timer.html">泡茶计时器</a>选同一种茶，倒计时帮你看表。想算茶叶和水的比例，看<a href="https://calmsteep.com/tea-leaf-ratio-calculator.html">茶叶水比例计算器</a>（英文站）。</p>
+
+<div class="faq">
+<h2>常见问题</h2>
+<h3>抽茶卡要钱吗？要注册吗？</h3>
+<p>不要钱，也不用注册。点一下就能抽，抽到的卡存在你的浏览器里。</p>
+<h3>抽到的卡存在哪里？</h3>
+<p>存在你这台设备浏览器的本地存储里。换设备、换浏览器，或者清掉浏览器数据，图鉴就会丢，需要重新抽。</p>
+<h3>稀有度是怎么分的？</h3>
+<p>R 是日常口粮茶，抽到概率约 70%；SR 是季节限定与名丛，约 25%；SSR 是稀有产地与老茶，约 5%。十连抽至少出一张 SR 以上。卡上的水温、投茶量和时间都按本站计时器的参数来。</p>
+</div>
+</main>
+<footer><div class="wrap"><p>慢茶 Tea &amp; Stillness 中文版。本站只分享茶文化与日常泡茶做法，不卖茶，不提供医疗建议。</p><p><a href="index.html">首页</a> · <a href="start-here.html">新手入门</a> · <a href="tea-brewing-timer.html">泡茶计时器</a> · <a href="faq.html">常见问题</a> · <a href="about.html">关于本站</a> · <a href="https://calmsteep.com/">English version</a></p></div></footer>
+<script>
+/* 卡池：24 张。冲泡参数取自本站计时器（杯泡）；产地为通用常识；稀有度为游戏分级。 */
+var CARDS = [
+{id:1, name:"茉莉花茶", cls:"花茶", rar:"R", origin:"福建福州", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"按绿茶的办法泡：水温低一点，别走开。", link:"lu-cha-zenme-pao.html"},
+{id:2, name:"碧螺春", cls:"绿茶", rar:"R", origin:"江苏苏州", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"绿茶怕开水，泡出来会发苦。水烧开后放两分钟再泡。", link:"lu-cha-zenme-pao.html"},
+{id:3, name:"黄山毛峰", cls:"绿茶", rar:"R", origin:"安徽黄山", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"绿茶怕开水，泡出来会发苦。水烧开后放两分钟再泡。", link:"lu-cha-zenme-pao.html"},
+{id:4, name:"六安瓜片", cls:"绿茶", rar:"R", origin:"安徽六安", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"绿茶怕开水，泡出来会发苦。水烧开后放两分钟再泡。", link:"lu-cha-zenme-pao.html"},
+{id:5, name:"祁门红茶", cls:"红茶", rar:"R", origin:"安徽祁门", temp:"95°C", leaf:"2–3 g", time:"3 分钟", fact:"水刚烧开就泡。如果喝起来发涩，下次茶叶少放一点。", link:"hong-cha-zenme-pao.html"},
+{id:6, name:"滇红", cls:"红茶", rar:"R", origin:"云南凤庆", temp:"95°C", leaf:"2–3 g", time:"3 分钟", fact:"水刚烧开就泡。如果喝起来发涩，下次茶叶少放一点。", link:"hong-cha-zenme-pao.html"},
+{id:7, name:"白牡丹", cls:"白茶", rar:"R", origin:"福建福鼎", temp:"85°C", leaf:"2 g", time:"3 分钟", fact:"白茶比较耐泡。觉得淡，先加长时间，别急着加水温。", link:"bai-cha-zenme-pao.html"},
+{id:8, name:"寿眉", cls:"白茶", rar:"R", origin:"福建", temp:"85°C", leaf:"2 g", time:"3 分钟", fact:"白茶比较耐泡。觉得淡，先加长时间，别急着加水温。", link:"bai-cha-zenme-pao.html"},
+{id:9, name:"铁观音", cls:"乌龙", rar:"R", origin:"福建安溪", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"清香型铁观音用 95°C 的水，第一泡 3 分钟。", link:"tieguanyin-zenme-pao.html"},
+{id:10, name:"冻顶乌龙", cls:"乌龙", rar:"R", origin:"台湾南投", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"乌龙喜欢热水和舒展的空间。", link:"wulong-cha-rumen.html"},
+{id:11, name:"普洱熟茶", cls:"普洱", rar:"R", origin:"云南普洱", temp:"100°C", leaf:"3 g", time:"2 分钟", fact:"先用热水润一次茶，把润茶的水倒掉，再泡两分钟。", link:"pu-erh-zenme-pao.html"},
+{id:12, name:"君山银针", cls:"黄茶", rar:"R", origin:"湖南岳阳", temp:"80°C", leaf:"2 g", time:"2 分半钟", fact:"按绿茶的办法泡：水温低一点，别走开。", link:"huang-cha-zenme-pao.html"},
+{id:13, name:"明前龙井", cls:"绿茶", rar:"SR", origin:"浙江杭州", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"绿茶怕开水，泡出来会发苦。水烧开后放两分钟再泡。", link:"lu-cha-zenme-pao.html"},
+{id:14, name:"大红袍", cls:"乌龙", rar:"SR", origin:"福建武夷山", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"岩茶耐泡，水温要够。", link:"da-hong-pao-zenme-pao.html"},
+{id:15, name:"凤凰单丛", cls:"乌龙", rar:"SR", origin:"广东潮州", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"乌龙喜欢热水和舒展的空间。", link:"wulong-cha-rumen.html"},
+{id:16, name:"东方美人", cls:"乌龙", rar:"SR", origin:"台湾新竹", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"乌龙喜欢热水和舒展的空间。", link:"wulong-cha-rumen.html"},
+{id:17, name:"白毫银针", cls:"白茶", rar:"SR", origin:"福建福鼎", temp:"85°C", leaf:"2 g", time:"3 分钟", fact:"白茶比较耐泡。觉得淡，先加长时间，别急着加水温。", link:"bai-cha-zenme-pao.html"},
+{id:18, name:"正山小种", cls:"红茶", rar:"SR", origin:"福建武夷山", temp:"95°C", leaf:"2–3 g", time:"3 分钟", fact:"水刚烧开就泡。如果喝起来发涩，下次茶叶少放一点。", link:"hong-cha-zenme-pao.html"},
+{id:19, name:"普洱生茶", cls:"普洱", rar:"SR", origin:"云南", temp:"100°C", leaf:"3 g", time:"2 分钟", fact:"先用热水润一次茶，把润茶的水倒掉，再泡两分钟。", link:"pu-erh-zenme-pao.html"},
+{id:20, name:"蒙顶黄芽", cls:"黄茶", rar:"SR", origin:"四川雅安", temp:"80°C", leaf:"2 g", time:"2 分半钟", fact:"按绿茶的办法泡：水温低一点，别走开。", link:"huang-cha-zenme-pao.html"},
+{id:21, name:"母树大红袍", cls:"乌龙", rar:"SSR", origin:"福建武夷山", temp:"95°C", leaf:"3 g", time:"3 分钟", fact:"岩茶耐泡，水温要够。母树现存极少，是传说，不是日常口粮。", link:"da-hong-pao-zenme-pao.html"},
+{id:22, name:"老班章普洱", cls:"普洱", rar:"SSR", origin:"云南勐海", temp:"100°C", leaf:"3 g", time:"2 分钟", fact:"先用热水润一次茶，把润茶的水倒掉，再泡两分钟。", link:"pu-erh-zenme-pao.html"},
+{id:23, name:"冰岛老寨普洱", cls:"普洱", rar:"SSR", origin:"云南临沧", temp:"100°C", leaf:"3 g", time:"2 分钟", fact:"先用热水润一次茶，把润茶的水倒掉，再泡两分钟。", link:"pu-erh-zenme-pao.html"},
+{id:24, name:"狮峰龙井", cls:"绿茶", rar:"SSR", origin:"浙江杭州", temp:"80°C", leaf:"2 g", time:"2 分钟", fact:"绿茶怕开水，泡出来会发苦。水烧开后放两分钟再泡。", link:"lu-cha-zenme-pao.html"}
+];
+var RAR_NAME = {R:"日常", SR:"稀有", SSR:"传说"};
+var RAR_W = {R:70, SR:25, SSR:5};
+var KEY = "tea-gacha-v1";
+var state = {owned:{}, draws:0, ssr:0};
+try {
+  var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+  if (saved && saved.owned) state = saved;
+} catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {} }
+function pickOne(){
+  var r = Math.random() * 100, rar = "R";
+  if (r < RAR_W.SSR) rar = "SSR"; else if (r < RAR_W.SSR + RAR_W.SR) rar = "SR";
+  var pool = CARDS.filter(function(c){ return c.rar === rar; });
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+function cardHTML(c, n){
+  var owned = state.owned[c.id] || 0;
+  return '<div class="tcard r-' + c.rar + '">'
+    + '<span class="rarity">' + c.rar + ' · ' + RAR_NAME[c.rar] + '</span>'
+    + '<h3>' + c.name + '</h3>'
+    + '<div class="origin">' + c.cls + ' · ' + c.origin + '</div>'
+    + '<div class="params">水温 <b>' + c.temp + '</b> · 投茶 <b>' + c.leaf + '</b> · 浸泡 <b>' + c.time + '</b></div>'
+    + '<div class="fact">' + c.fact + '</div>'
+    + '<div class="go"><a href="' + c.link + '">怎么泡 ' + c.name + ' →</a></div>'
+    + (n > 1 ? '<div class="count">已拥有 × ' + n + '</div>' : '')
+    + '</div>';
+}
+function renderStats(){
+  var ownedCount = Object.keys(state.owned).length;
+  document.getElementById("stDraws").textContent = state.draws;
+  document.getElementById("stOwned").textContent = ownedCount + " / 24";
+  document.getElementById("stSsr").textContent = state.ssr;
+  document.getElementById("stAroma").textContent = state.draws * 10 + state.ssr * 500;
+  document.getElementById("albumBar").style.width = Math.round(ownedCount / 24 * 100) + "%";
+  document.getElementById("albumText").textContent = ownedCount === 0
+    ? "还没抽到任何卡，先抽一张试试。"
+    : "已收集 " + ownedCount + " / 24 张" + (ownedCount === 24 ? "，图鉴全齐了！" : "，继续抽，集齐 24 张。");
+}
+function renderAlbum(){
+  var grid = document.getElementById("albumGrid");
+  grid.innerHTML = CARDS.map(function(c){
+    var n = state.owned[c.id] || 0;
+    if (!n) return '<div class="acell locked"><div class="a-rar">' + c.rar + '</div><div class="a-name">？</div><div class="a-num">' + c.cls + '</div></div>';
+    return '<div class="acell owned-r-' + c.rar + '"><div class="a-rar">' + c.rar + ' · ' + RAR_NAME[c.rar] + '</div><div class="a-name">' + c.name + '</div><div class="a-num">× ' + n + '</div></div>';
+  }).join("");
+}
+function draw(n){
+  var out = [];
+  for (var i = 0; i < n; i++) out.push(pickOne());
+  if (n === 10 && !out.some(function(c){ return c.rar !== "R"; })) {
+    var srPool = CARDS.filter(function(c){ return c.rar === "SR" || c.rar === "SSR"; });
+    out[Math.floor(Math.random() * 10)] = srPool[Math.floor(Math.random() * srPool.length)];
+  }
+  out.forEach(function(c){
+    state.owned[c.id] = (state.owned[c.id] || 0) + 1;
+    state.draws++;
+    if (c.rar === "SSR") state.ssr++;
+  });
+  save();
+  var box = document.getElementById("drawResult");
+  box.innerHTML = out.map(function(c, i){
+    return '<div style="animation-delay:' + (i * 70) + 'ms">' + cardHTML(c, state.owned[c.id]) + '</div>';
+  }).join("");
+  renderStats();
+  renderAlbum();
+  document.getElementById("drawResult").scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+document.getElementById("draw1").onclick = function(){ draw(1); };
+document.getElementById("draw10").onclick = function(){ draw(10); };
+document.getElementById("resetBtn").onclick = function(){
+  if (!confirm("确定要清空图鉴吗？抽到的卡都会丢掉。")) return;
+  state = {owned:{}, draws:0, ssr:0};
+  save();
+  document.getElementById("drawResult").innerHTML = "";
+  renderStats();
+  renderAlbum();
+};
+renderStats();
+renderAlbum();
+</script>
+<script>
+/* 茶站浏览计数 */
+(function(){var pid=location.hostname+location.pathname;fetch('/api/view?id='+encodeURIComponent(pid)).catch(function(){});})();
+</script>
+</body>
+</html>

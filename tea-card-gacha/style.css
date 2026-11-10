@@ -1,0 +1,136 @@
+/* 慢茶中文版 — 下厨房式改版：照片流 + 左对齐 + 大留白，不抄任何站的文字图片 */
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#FDFCF9;color:#1F1B16;margin:0;line-height:1.9;font-size:18px}
+h1,h2,h3,.brand{font-family:"Noto Serif SC","Songti SC","STSong",serif}
+a{color:#7A5C3A;text-decoration:none}
+a:hover{color:#8A3B2E}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+main{max-width:720px;margin:0 auto;padding:0 24px}
+body.home main{max-width:1080px}
+
+/* 顶栏：左品牌、右导航，一条细线，不居中 */
+.topbar{border-bottom:1px solid #E8E0D2;background:#FDFCF9}
+.topbar-in{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+.brand{font-size:24px;font-weight:700;color:#1F1B16;letter-spacing:.06em}
+.brand span{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;font-size:12px;font-weight:400;letter-spacing:.22em;color:#8A7D6B;margin-left:8px}
+.nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+.nav a{color:#1F1B16;padding-bottom:2px;border-bottom:2px solid transparent}
+.nav a:hover{color:#8A3B2E;border-bottom-color:#8A3B2E}
+
+/* 页头：左对齐，大字标题 */
+.pagehead{padding:44px 0 4px}
+.kicker{font-size:13px;letter-spacing:.22em;color:#8A3B2E;margin:0 0 10px}
+h1{font-size:40px;line-height:1.3;margin:0 0 14px}
+.lede{font-size:19px;line-height:1.8;color:#55503F;margin:0 0 8px}
+.meta{font-size:15px;color:#8A7D6B;margin:10px 0 0}
+.route{font-size:15px;color:#8A7D6B;margin:14px 0 0}
+.route b{color:#8A3B2E;font-weight:600}
+
+/* 正文 */
+h2{font-size:26px;line-height:1.4;margin:44px 0 12px;padding-left:12px;border-left:3px solid #8A3B2E}
+h3{font-size:21px;margin:30px 0 8px}
+p{margin:0 0 16px}
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin-bottom:8px}
+hr{border:none;border-top:1px solid #E8E0D2;margin:36px 0}
+/* 图片尺寸：所有图统一裁切、不拉伸、不撑满屏 —— 原图均为 960×640(3:2)，只靠 CSS 控制显示尺寸 */
+.hero{width:100%;aspect-ratio:16/9;object-fit:cover;max-height:280px;display:block;margin:24px 0}
+.hero-lead{margin:28px 0 8px}
+.hero-lead img{width:100%;aspect-ratio:16/9;object-fit:cover;max-height:280px;display:block}
+.hero-lead figcaption{font-size:14px;color:#8A7D6B;margin-top:8px}
+main img{max-width:100%}
+.related{border-top:1px solid #E8E0D2;margin-top:48px;padding-top:8px}
+.related ul{font-size:17px}
+
+/* 首页照片流：一篇大图打头，下面一行一图 */
+.section-label{font-size:13px;letter-spacing:.24em;color:#8A7D6B;margin:52px 0 6px}
+.section-title{font-size:28px;margin:0 0 8px;padding:0;border:none}
+.stream{border-top:1px solid #E8E0D2;margin-top:8px}
+.stream-lead{padding:26px 0;border-bottom:1px solid #E8E0D2}
+.stream-lead img{width:100%;aspect-ratio:16/9;object-fit:cover;max-height:280px;display:block}
+.stream-lead h2{font-size:30px;margin:16px 0 8px;padding:0;border:none}
+.stream-lead p{margin:0;color:#55503F;font-size:17px}
+.stream-item{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid #E8E0D2;align-items:start}
+.stream-item a{display:block}
+.stream-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.stream-item h2{font-size:23px;margin:0 0 6px;padding:0;border:none}
+.stream-item p{margin:0;color:#55503F;font-size:16px}
+.stream-item .tag{color:#8A3B2E;font-size:14px;display:block;margin-bottom:4px}
+
+/* 话题合集 */
+.topics{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px}
+.topic{border:1px solid #D8CFBC;border-radius:999px;padding:8px 16px;font-size:15px;color:#1F1B16}
+a.topic:hover{border-color:#8A3B2E;color:#8A3B2E}
+
+/* 接下来会写：纯文字列表，红点标记 */
+.next-list{list-style:none;padding:0}
+.next-list li{padding:10px 0 10px 18px;border-bottom:1px solid #F0EADD;position:relative;font-size:17px}
+.next-list li:before{content:"";position:absolute;left:0;top:20px;width:7px;height:7px;background:#8A3B2E}
+
+/* 六大茶类：一行文字，不用盒子 */
+.tea-line{font-size:18px;line-height:2.1}
+.tea-line b{color:#8A3B2E;font-weight:600}
+
+/* 页脚 */
+footer{padding:28px 24px 56px;color:#8A7D6B;font-size:14px;line-height:1.8;border-top:1px solid #E8E0D2;margin-top:56px}
+footer .wrap{padding:0}
+footer p{margin:0 0 8px}
+footer a{color:#8A7D6B}
+footer a:hover{color:#8A3B2E}
+
+@media (max-width:640px){
+  body{font-size:17px}
+  h1{font-size:32px}
+  .hero,.hero-lead img,.stream-lead img{max-height:180px}
+  .stream-item{grid-template-columns:1fr;gap:12px}
+  .stream-item img{aspect-ratio:16/10;max-height:180px}
+  .stream-lead h2{font-size:26px}
+  .topbar-in{padding-top:12px;padding-bottom:12px}
+}
+
+/* ---- 动画：克制、慢、只做点缀 ---- */
+/* 链接与标签：颜色/下划线缓慢过渡 */
+a{transition:color .25s ease,border-color .25s ease}
+.nav a{transition:color .25s ease,border-color .25s ease}
+.topic{transition:color .25s ease,border-color .25s ease,background-color .25s ease}
+a.topic:hover{background-color:#F7F0E2}
+
+/* 首页大图：20 秒极慢推近（Ken Burns），1.0 → 1.05 */
+.hero-lead{overflow:hidden}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.05)}}
+.hero-lead img{animation:kenburns 20s ease-in-out infinite alternate}
+
+/* 文章页大图：载入时淡淡出现一次 */
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+.hero{animation:fade-in .8s ease both}
+
+/* 标题行：载入时轻微上浮 */
+@keyframes fade-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.kicker,h1{animation:fade-up .7s ease both}
+.lede{animation:fade-up .7s ease .08s both}
+.route{animation:fade-up .7s ease .16s both}
+
+/* 照片流：滚动到视口时淡入 + 轻微上移（JS 加 .visible；无 JS 时不隐藏） */
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.visible{opacity:1;transform:none}
+.stream>.reveal:nth-child(2){transition-delay:.08s}
+.stream>.reveal:nth-child(3){transition-delay:.16s}
+.stream>.reveal:nth-child(4){transition-delay:.24s}
+
+/* 照片流小图：悬停时极轻微放大 */
+.stream-item a{overflow:hidden}
+.stream-item img{transition:transform .45s ease}
+.stream-item a:hover img{transform:scale(1.03)}
+
+/* 减动效：用户开了减少动态，一律关掉动画 */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* 要点框：一句话结论 + 事实表 */
+.key-facts{border:1px solid #E8E0D2;background:#fff;border-radius:12px;padding:18px 20px;margin:20px 0}
+.key-facts p{margin:0 0 12px}
+.key-facts table{width:100%;border-collapse:collapse;font-size:16px}
+.key-facts th,.key-facts td{padding:6px 8px;text-align:left;vertical-align:top;border-bottom:1px solid #F0EAD9}
+.key-facts tr:last-child th,.key-facts tr:last-child td{border-bottom:none}
+.key-facts th{width:34%;color:#8A3B2E;font-weight:600}

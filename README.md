@@ -7,6 +7,7 @@ Small free web tools from [Tea & Stillness](https://calmsteep.com) — each one 
 | Tool | Folder | Live page |
 | --- | --- | --- |
 | Tea-Leaf Ratio Calculator — how much leaf and water for 6 teas, cup or gongfu style, both directions | `tea-leaf-ratio-calculator/` | https://calmsteep.com/tea-leaf-ratio-calculator.html |
+| Tea Card Gacha — free draw, no sign-up: 24 tea cards with origin and brewing parameters, collection album saved in the browser | `tea-card-gacha/` | https://cn.calmsteep.com/tea-card-gacha.html |
 | Image Format Converter — WebP / HEIC / PNG / JPG / AVIF / GIF / BMP to JPG, PNG or WebP, converted in the browser, nothing uploaded | `image-converter/` | https://calmsteep.com/image-converter.html |
 | WebP to JPG | `image-converter/webp-to-jpg.html` | https://calmsteep.com/webp-to-jpg.html |
 | HEIC to JPG | `image-converter/heic-to-jpg.html` | https://calmsteep.com/heic-to-jpg.html |
